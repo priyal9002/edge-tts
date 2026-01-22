@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const { Communicate, } = require("edge-tts-universal");
+const { Communicate, listVoices } = require("edge-tts-universal");
 
 const app = express();
 app.use(express.json());
@@ -45,7 +45,7 @@ app.post("/tts", async (req, res) => {
 
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: "TTS generation failed" });
+        res.status(500).json({ err });
     }
 });
 
@@ -55,7 +55,8 @@ app.get("/check", async (req, res) => {
 
         res.status(200).json(getAllVoicesList);
     } catch (err) {
-        res.status(500).json({ error: "TTS generation failed" });
+
+        res.status(500).json({ err });
         console.error(err);
     }
 })
