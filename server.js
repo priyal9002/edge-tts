@@ -24,7 +24,8 @@ app.post("/tts", async (req, res) => {
 
         // Create Communicate instance requesting an MP3 format
         // (the constructor signature used here matches examples; adapt if your version differs)
-        const communicate = new Communicate(text, voice, {
+        const communicate = new Communicate(text, {
+            voice,
             rate,
             pitch,
             format: "audio-24khz-48kbitrate-mono-mp3"
