@@ -26,8 +26,9 @@ app.post("/tts", async (req, res) => {
         // (the constructor signature used here matches examples; adapt if your version differs)
         const communicate = new Communicate(text, {
             voice,
-            rate,
-            pitch,
+            rate: '+10%',
+            volume: '+0%',
+            pitch: '+0Hz',
             format: "audio-24khz-48kbitrate-mono-mp3"
         });
 
