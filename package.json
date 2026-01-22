@@ -1,0 +1,27 @@
+{
+  "name": "edge-tts",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/priyal9002/edge-tts#readme",
+  "bugs": {
+    "url": "https://github.com/priyal9002/edge-tts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyal9002/edge-tts.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "edge-tts-universal": "^1.3.3",
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
